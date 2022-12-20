@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> 成功 </h1>
+<a th:href="@{http://www.baidu.com}">baidu</a>
+<h3>使用字符串传递参数</h3>
+<a th:href="@{'/tpl/queryAccount?id='+${userId}}">model id</a>
+<h3>推荐使用 的参数传递方式</h3>
+<a th:href="@{/tpl/queryAccount(id=${userId})}"></a>
+<h3>推荐使用 的参数传递方式</h3>
+<a th:href="@{/tpl/queryUser(age=12name=lisi)}"></a>
+
+</body>
+</html>
